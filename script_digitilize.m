@@ -18,7 +18,6 @@ sum_full = splitapply(@mean,template_full(dots_id), template_dots_labeled(dots_i
 sum_empty = splitapply(@mean,template_empty(dots_id), template_dots_labeled(dots_id));
 
 dots = table();
-dots.key = (1:numberOfDots)';
 dots.x=nan(numberOfDots,1); dots.y=nan(numberOfDots,1);
 for i=1:numberOfDots
     [row, col] = find(template_dots_labeled==i);
@@ -53,7 +52,10 @@ geoscatter(dots.lat(dots.country=="Pelagic"), dots.lon(dots.country=="Pelagic"),
 geobasemap('landcover'); 
 geolimits(ll_box(4:-1:3), ll_box(1:2))
 
-dots.grid = [nan 0 5 4 3 29 2 6 30 9 8 10 7 11 31 16 12 14 15 13 32 21 17 20 19 18 25 24 23 22 27 26]';
+% dots.grid_id = [nan 0 5 4 3 29 2 6 30 9 8 10 7 11 31 16 12 14 15 13 32 21 17 20 19 18 25 24 23 22 27 26]';
+
+dots.name = "square_"+dots.country+"_lat"+(floor(dots.lat)+.5)+"N_lon"+abs(floor(dots.lon)+.5)+"E";
+
 %% 
 
 % Find all page to read

@@ -33,6 +33,7 @@ if false
             sp_list.matchType(i_sp) = res.matchType;
             sp_list.species(i_sp) = res.species;
             sp_list.canonicalName(i_sp) = res.canonicalName;
+            sp_list.key(i_sp) = res.speciesKey;
         end
     end
     writetable(sp_list,'data/gbif/sp_list_gbif.xlsx')
@@ -45,11 +46,14 @@ end
 
 
 %%  Constructure table
+grid = readtable('data/geometry/grid.csv', 'TextType', 'string');
 
 presence = readtable("data/presence.csv", 'TextType', 'string', "ReadVariableNames",true);
 presence_file =presence.file;
 presence = presence{:,2:end};
 dots = readtable("data/dots.csv", 'TextType', 'string');
+
+assert(all(dots.name==grid.name))
 
 [file_id, map_id]=find(presence);
 
@@ -92,7 +96,7 @@ for i_sp=1:height(sp_list)
 
     id = data.file_id == tmp;
     
-    data.taxonID(id) = sp_list.sp_index(i_sp);
+    data.taxonID(id) = sp_list.key(i_sp);
     data.originalNameUsage(id) = sp_list.original_name(i_sp);
     data.order(id) = sp_list.order(i_sp);
     data.family(id)	= sp_list.family(i_sp);
@@ -106,16 +110,14 @@ data.continent(:) = "Africa";
 % data.countryCode(:) = "KE";
 data.country = dots.country(data.map_id);
 
-grid = readtable('data/geometry/grid.csv', 'TextType', 'string');
-data.footprintWKT = grid.wkt(dots.grid(data.map_id)+1);
+data.footprintWKT = grid.geometry(data.map_id);
 data.footprintSRS(:) = "epsg:4326";
 
 data.decimalLatitude= dots.lat(data.map_id);
 data.decimalLongitude = dots.lon(data.map_id); 
 data.geodeticDatum(:) = "epsg:4326";
 
-data.locality = "square_"+data.country+"_lat"+(floor(data.decimalLatitude)+.5)+"N_lon"+abs(floor(data.decimalLongitude)+.5)+"E";
-
+data.locality = dots.name(data.map_id);
 % Add occurence id
 data.occurrenceID = "species_"+data.taxonID+"|"+data.locality;
 %data.occurrenceID = data.eventDateLabel +"_"+data.CommonName+"_"+data.SqN+"_"+data.SqL;
