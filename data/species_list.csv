@@ -278,12 +278,12 @@
 275,Turtur afer,,Columbidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_083_3
 276,Turtur abyssinicus,,Columbidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_083_4
 277,Treron australis,Treron calvus,Columbidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_083_5
-278,Treron waalia,,Columbidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_083_6
-279,Poicephalus robustus,Poicephalus fuscicollis,Psittacidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_084_1
-280,Poicephalus senegadlus,,Psittacidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_084_2
-281,Psittacula krameri,,Psittacidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_084_3
-282,Tauraco persa,,Musophagidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_084_4
-283,Musophaga violacea,,Musophagidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_084_5
+278,Treron waalia,,Columbidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_084_1
+279,Poicephalus robustus,Poicephalus fuscicollis,Psittacidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_084_2
+280,Poicephalus senegadlus,,Psittacidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_084_3
+281,Psittacula krameri,,Psittacidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_084_4
+282,Tauraco persa,,Musophagidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_084_5
+283,Musophaga violacea,,Musophagidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_084_6
 284,Crinifer piscator,,Musophagidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_085_1
 285,Clamator glandarius,,Cuculidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_085_2
 286,Clamator jacobinus,,Cuculidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_085_3
@@ -507,7 +507,7 @@
 492,Sphenoeacus mentalis,Melocichla mentalis,Macrosphenidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_127_5
 ,Hippolais icterina,,Acrocephalidae,TRUE,TRUE,FALSE,FALSE,
 493,Hippolais polygiotta,,Acrocephalidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_128_1
-494,Hippolais pallida,,Acrocephalidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_128_2
+494,Hippolais pallida,Iduna opaca,Acrocephalidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_128_2
 495,Sylvia hortensis,Curruca hortensis,Sylviidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_128_3
 496,Sylvia borin,,Sylviidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_128_4
 497,Sylvia atricapilla,,Sylviidae,FALSE,FALSE,FALSE,TRUE,oiseaux_de_senegambie_Page_128_5

@@ -49,7 +49,7 @@ end
 grid = readtable('data/geometry/grid.csv', 'TextType', 'string');
 
 presence = readtable("data/presence.csv", 'TextType', 'string', "ReadVariableNames",true);
-presence_file =presence.file;
+presence_file = presence{:,1};
 presence = presence{:,2:end};
 dots = readtable("data/dots.csv", 'TextType', 'string');
 

@@ -138,7 +138,7 @@ for i_f = 31:151  % i_f=31 -> 151;
     id_x = id_xc-round(gszt(2)/2);
     % sort map by page along the x axis
 
-    [~,id_xysort]=sort(floor(id_y/(szp(1)/3))+floor(id_x/(szp(2)/2.2))*3);
+    [~,id_xysort]=sort(id_y);
     id_x=id_x(id_xysort);
     id_y=id_y(id_xysort);
 

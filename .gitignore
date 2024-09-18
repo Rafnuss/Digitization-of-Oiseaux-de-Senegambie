@@ -3,3 +3,4 @@ data/book/*.*
 data/extract/*
 # data/extract_classify/*
 .DS_Store
+data/extract_classify/*
